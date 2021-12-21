@@ -1,0 +1,382 @@
+// Importin'
+@import "variables.scss";
+@import "~bootstrap";
+@import "darkmode.scss";
+
+// Global
+
+// All this is to make the footer sticky to the bottom.
+html, body, #app { min-height: 100vh; }
+body, #app { display: flex; flex-direction: column; }
+main { flex: 1 0 auto; }
+.footer { flex-shrink: 0; }
+
+html { background-color: $primary; }
+
+body {
+  background-color: $white;
+  font-size: 1rem;
+  font-family: 'Cormorant Garamond';
+  font-weight: 500;
+  color: $black;
+  letter-spacing: -0.1px;
+}
+
+a:active {
+  position: relative;
+  top: 2px;
+}
+
+// Responsive Text
+// @include media-breakpoint-up(xs) {
+//   html {
+//     font-size: 1.125rem;
+//   }
+// }
+// 
+// @include media-breakpoint-up(sm) {
+//   html {
+//     font-size: 1.1rem;
+//   }
+// }
+// 
+// @include media-breakpoint-up(md) {
+//   html {
+//     font-size: 1rem;
+//   }
+// }
+
+// MrS Sections
+#profile {
+  min-height: 100vh;
+  max-width: 1024px;
+  margin: 0 auto 0 200px;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+#profile > #profile-wrap {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  // background-color: red;
+}
+
+#profile > #profile-wrap > div:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#profile > #profile-wrap > div:nth-of-type(2) {
+  // background-color: orange;
+}
+
+@media (max-width: 1200px) {
+  #profile {
+    margin: 0 64px 0 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #profile {
+    margin: 0 1rem;
+    margin: 2rem 1rem;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  #profile > #profile-wrap {
+    grid-template-columns: 1fr;
+  }
+  
+  #profile {
+    margin: 2rem 1rem;
+  }
+}
+
+
+#portfolio {
+  min-height: 100vh;
+  background-color: orange;
+}
+
+#contact {
+  min-height: 100vh;
+  background-color: pink;
+}
+
+#credits {
+  min-height: 100vh;
+  background-color: teal;
+}
+
+// Typography
+.ff-sans {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.ff-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+blockquote {
+  margin: 1rem 0 1.5rem;
+  background-color: $gray-100;
+  padding: 1.5rem 2rem .5rem !important;
+  font-style: italic;
+}
+
+blockquote {
+  p {
+    margin-bottom: 1rem !important;
+  }
+
+  p:last-of-type {
+    font-family: "Benton Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: .875rem;
+  }
+}
+
+pre {
+  font-size: 72%;
+  color: $link-color;
+  background-color: $gray-100;
+  padding: 1rem;
+}
+
+.hero hr {
+  margin: 4rem auto 2rem;
+}
+
+/* ---------- Buttons --------- */
+.btn {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 0.9375rem;
+  padding: 13px 2rem 10px;
+  letter-spacing: 0.2px;
+  border-radius: 96px;
+  box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.12);
+}
+
+@media (max-width: 512px) {
+  .btn {
+    width: 100%;
+  }
+}
+
+.btn-xs {
+  font-size: .6875rem;
+  font-weight: 700;
+  padding: 5px 1rem 2px;
+}
+
+.btn-sm {
+  font-size: .8125rem;
+  line-height: .8125rem;
+  font-weight: 700;
+  padding: 10px 1.5rem 7px;
+}
+
+.btn-lg {
+  font-size: 1rem;
+  line-height: 0.9;
+  padding: 1.0625rem 2rem 0.9375rem;
+}
+
+.btn-outline-dark {
+  background-color: $white;
+}
+
+// Breadcrumbs
+.breadcrumb {
+  background: transparent;
+  color: $black;
+  font-size: 0.75rem;
+  font-family: $font-family-monospace;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+  border-radius: 0;
+  border-top: 1px solid $gray-200;
+  border-bottom: 1px solid $gray-200;
+  padding: 10px 1rem 10px 0;
+  margin-bottom: 3rem;
+}
+
+.divider {
+  border-bottom: 1px solid $gray-200;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+// Blog
+.box {
+  border: 1px solid $gray-200;
+  padding: 2rem;
+  font-size: 0.9375rem;
+  letter-spacing: 0;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.box a:not(.btn) {
+  color: $gray-900;
+}
+
+@media (max-width: 767px) {
+  .box {
+    padding: 1.5rem;
+  }
+}
+
+.blog-details {
+  font-size: $font-size-200;
+  font-family: $font-family-monospace;
+  text-transform: uppercase;
+}
+
+.blog-post {
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.blog-post {
+  p {
+    margin-bottom: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    margin-top: 2rem;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    margin-top: 2rem;
+  }
+
+  img {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    font-size: .9125rem;
+    color: #777;
+    text-align: center;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.portfolio img {
+  border: 1px solid $gray-200;
+}
+
+.portfolio-post p {
+  font-size: 1.25rem;
+}
+
+.portfolio-post img {
+  margin-bottom: 1rem;
+  border: 1px solid $gray-100;
+  max-width: 100%;
+  height: auto;
+}
+
+// Contact Page
+
+.form-control,
+.form-control:focus {
+  font-size: .875rem;
+  height: 48px;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: .5rem;
+}
+
+textarea.form-control {
+  min-height: 256px;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+// Siri Shortcuts Page --------- */
+.box.shortcuts {
+  background-color: $white;
+  border: 1px solid $gray-400;
+  border-radius: 0.5rem;
+  min-height: 256px;
+  padding: 1.5rem;
+  color: $black;
+}
+
+.box.shortcuts:hover {
+  border: 1px solid #2AC9FF;
+  color: #2AC9FF;
+  text-decoration: underline;
+  text-decoration-color: #2AC9FF;
+}
+
+.box.shortcuts h3 {
+  font-style: normal;
+}
+
+// Downloads
+.downloads .box {
+  margin-bottom: 0;
+}
+
+// Stuff I Use
+.box.gear {
+  background: #f8f8f8;
+  box-shadow: inset 0 0 16px 0 rgba(0,0,0,0.08);
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+}
+
+@media (max-width: 1023px) {
+  .box.gear {
+    padding: 1.5rem;
+  }
+  
+  .box.gear .stuff-img img {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.box.gear {
+  .stuff-img {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 21px 0 rgba(0,0,0,0.16);
+  }
+  
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
