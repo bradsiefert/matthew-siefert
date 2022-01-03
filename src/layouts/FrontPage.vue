@@ -17,7 +17,7 @@
             <p class="font-size-700">Sitel Group / SYKES TalentSprout</p>
             
             <h4 class="font-size-500 ff-sans text-uppercase gray-400">Previously</h4>
-            <p class="font-size-700">NIIT / Cognitive Arts, True Value, National Safety Council</p>
+            <p class="font-size-700 mb-0">NIIT / Cognitive Arts, True Value, National Safety Council</p>
           </div>
           
           <div>
